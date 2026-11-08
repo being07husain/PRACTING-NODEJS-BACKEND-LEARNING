@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Product | MiniMart</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            color: #222;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        .container {
+            width: min(450px, calc(100% - 32px));
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 27px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: inherit;
+            background: white;
+            color: #222;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        button,
+        .cancel-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-family: inherit;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .cancel-btn {
+            background: #e5e7eb;
+            color: #222;
+            transition: background 0.2s;
+        }
+
+        .cancel-btn:hover {
+            background: #d1d5db;
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 14px;
+                display: inline-block;
+                margin-top: 8px;
+            }
+
+            .container {
+                margin: 30px auto;
+                padding: 24px 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>🛒 MiniMart</h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/products">Products</a>
+            <a href="/sell">Sell Products</a>
+            <a href="/manageProducts">Manage Products</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>Edit Product</h1>
+        <p class="subtitle">Update your product details below.</p>
+
+        <form action="/edit-product/<%= product._id %>" method="POST">
+
+            <div class="form-group">
+                <label for="name">Product Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value="<%= product.name %>"
+                    placeholder="Enter product name"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+
+                <select id="category" name="category" required>
+                    <option value="">Select Category</option>
+
+                    <% ['Electronics', 'Clothing', 'Food', 'Books', 'Agriculture', 'Other'].forEach(category => { %>
+                        <option
+                            value="<%= category %>"
+                            <%= product.category === category ? 'selected' : '' %>>
+                            <%= category %>
+                        </option>
+                    <% }) %>
+
+                    <% if (product.category && !['Electronics', 'Clothing', 'Food', 'Books', 'Agriculture', 'Other'].includes(product.category)) { %>
+                        <option value="<%= product.category %>" selected>
+                            <%= product.category %>
+                        </option>
+                    <% } %>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price (₹)</label>
+                <input
+                    type="number"
+                    id="price"
+                    name="price"
+                    value="<%= product.price %>"
+                    placeholder="Enter price"
+                    min="0"
+                    step="0.01"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    value="<%= product.quantity %>"
+                    placeholder="Enter quantity"
+                    min="0"
+                    step="1"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Describe your product"><%= product.description || '' %></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Save Changes</button>
+                <a href="/manageProducts" class="cancel-btn">Cancel</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+```

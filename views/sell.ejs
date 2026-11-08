@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sell Products</title>
+
+    <style>
+        nav {
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            color: #222;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 450px;
+            background: white;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #222;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+
+        <h2>🛒 MiniMart</h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/products">Products</a>
+            <a href="/sell">Sell Products</a>
+        </div>
+
+    </nav>
+    <div class="container">
+
+        <h1>Sell Your Product</h1>
+
+        <form action="/sell" method="POST">
+
+            <div class="form-group">
+                <label for="name">Product Name</label>
+
+                <input type="text" id="name" name="name" placeholder="Enter product name" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="category">Category</label>
+
+                <select id="category" name="category" required>
+
+                    <option value="">Select Category</option>
+
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Food">Food</option>
+                    <option value="Books">Books</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Other">Other</option>
+
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="price">Price</label>
+
+                <input type="number" id="price" name="price" placeholder="Enter price" min="0" step="0.01" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+
+                <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="description">Description</label>
+
+                <textarea id="description" name="description" placeholder="Describe your product"></textarea>
+            </div>
+
+
+            <button type="submit">
+                Add Product
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

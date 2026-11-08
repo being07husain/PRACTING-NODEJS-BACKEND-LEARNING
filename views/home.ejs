@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MiniMart | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            color: #222;
+        }
+
+        nav {
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2563eb;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .categories {
+            padding: 50px 8%;
+        }
+
+        .categories h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .category-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background: white;
+            padding: 30px 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .category-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .category-card a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width: 800px) {
+            .category-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>🛒 MiniMart</h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/products">Products</a>
+            <a href="/sell">Sell Products</a>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>Welcome to MiniMart</h1>
+
+        <p>
+            Everything you need, all in one place.
+        </p>
+
+        <a href="/products" class="btn">
+            Explore Products
+        </a>
+
+    </section>
+
+
+    <section class="categories">
+
+        <h2>Shop By Category</h2>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <div class="icon">👕</div>
+                <h3>Clothes</h3>
+                <a href="/category/Clothes">
+                    Explore
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <div class="icon">💻</div>
+                <h3>Electronics</h3>
+                <a href="/category/Electronics">
+                    Explore
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <div class="icon">🎧</div>
+                <h3>Accessories</h3>
+                <a href="/category/Accessories">
+                    Explore
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <div class="icon">⚽</div>
+                <h3>Sports Equipment</h3>
+                <a href="/category/Sports%20Equipment">
+                    Explore
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <div class="icon">🌸</div>
+                <h3>Perfumes</h3>
+                <a href="/category/Perfumes">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 MiniMart. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

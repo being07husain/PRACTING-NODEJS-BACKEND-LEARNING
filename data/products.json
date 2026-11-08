@@ -1,0 +1,136 @@
+[{
+      "id": 1,
+      "name": "Oversized Cotton T-Shirt",
+      "category": "Clothes",
+      "price": 799,
+      "quantity": 25,
+      "brand": "UrbanWear",
+      "description": "Comfortable oversized cotton t-shirt suitable for everyday casual wear."
+    },
+    {
+      "id": 2,
+      "name": "Slim Fit Denim Jeans",
+      "category": "Clothes",
+      "price": 1499,
+      "quantity": 18,
+      "brand": "DenimPro",
+      "description": "Classic slim fit denim jeans with a comfortable stretch fabric."
+    },
+    {
+      "id": 3,
+      "name": "Hooded Sweatshirt",
+      "category": "Clothes",
+      "price": 1299,
+      "quantity": 12,
+      "brand": "StreetStyle",
+      "description": "Warm hooded sweatshirt designed for casual winter outfits."
+    },
+    {
+      "id": 4,
+      "name": "Wireless Bluetooth Headphones",
+      "category": "Electronics",
+      "price": 2499,
+      "quantity": 15,
+      "brand": "SoundMax",
+      "description": "Wireless headphones with deep bass, comfortable ear cushions and long battery life."
+    },
+    {
+      "id": 5,
+      "name": "Mechanical Gaming Keyboard",
+      "category": "Electronics",
+      "price": 3499,
+      "quantity": 10,
+      "brand": "KeyMaster",
+      "description": "Mechanical keyboard designed for gaming and productive typing."
+    },
+    {
+      "id": 6,
+      "name": "Smart Fitness Watch",
+      "category": "Electronics",
+      "price": 2999,
+      "quantity": 20,
+      "brand": "FitTech",
+      "description": "Smartwatch with fitness tracking, heart-rate monitoring and notification support."
+    },
+    {
+      "id": 7,
+      "name": "Leather Wallet",
+      "category": "Accessories",
+      "price": 599,
+      "quantity": 30,
+      "brand": "LeatherCraft",
+      "description": "Compact genuine leather wallet with multiple card and cash compartments."
+    },
+    {
+      "id": 8,
+      "name": "Classic Sunglasses",
+      "category": "Accessories",
+      "price": 899,
+      "quantity": 22,
+      "brand": "VisionPro",
+      "description": "Classic sunglasses with UV protection and a lightweight frame."
+    },
+    {
+      "id": 9,
+      "name": "Stainless Steel Watch",
+      "category": "Accessories",
+      "price": 1999,
+      "quantity": 14,
+      "brand": "TimeZone",
+      "description": "Elegant stainless steel wristwatch suitable for casual and formal occasions."
+    },
+    {
+      "id": 10,
+      "name": "Football",
+      "category": "Sports Equipment",
+      "price": 999,
+      "quantity": 16,
+      "brand": "SportX",
+      "description": "Durable training football suitable for outdoor practice and recreational matches."
+    },
+    {
+      "id": 11,
+      "name": "Cricket Bat",
+      "category": "Sports Equipment",
+      "price": 2499,
+      "quantity": 8,
+      "brand": "PowerPlay",
+      "description": "Lightweight cricket bat designed for powerful shots and comfortable handling."
+    },
+    {
+      "id": 12,
+      "name": "Adjustable Dumbbells",
+      "category": "Sports Equipment",
+      "price": 2999,
+      "quantity": 7,
+      "brand": "FitGear",
+      "description": "Adjustable dumbbells suitable for strength training and home workouts."
+    },
+    {
+      "id": 13,
+      "name": "Ocean Breeze Perfume",
+      "category": "Perfumes",
+      "price": 1599,
+      "quantity": 20,
+      "brand": "AromaLux",
+      "description": "Fresh aquatic fragrance with a clean and refreshing scent profile."
+    },
+    {
+      "id": 14,
+      "name": "Midnight Oud Perfume",
+      "category": "Perfumes",
+      "price": 2299,
+      "quantity": 11,
+      "brand": "RoyalAroma",
+      "description": "Rich oud fragrance with warm woody and sophisticated notes."
+    },
+    {
+      "id": 15,
+      "name": "Citrus Fresh Eau De Parfum",
+      "category": "Perfumes",
+      "price": 1299,
+      "quantity": 17,
+      "brand": "FreshScents",
+      "description": "Bright citrus fragrance designed for a fresh everyday feel."
+    }
+  ]
