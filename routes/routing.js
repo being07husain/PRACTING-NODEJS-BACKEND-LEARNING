@@ -9,6 +9,6 @@ userRouter.get('/manageProducts', controllers.manageProducts);
 userRouter.get('/edit-product/:id', controllers.getEditProduct);
 userRouter.post('/edit-product/:id', controllers.postEditProduct);
 userRouter.post('/products/delete/:id', controllers.deleteProduct);
-
-
+userRouter.get('/login', controllers.login);
+userRouter.post('/login', controllers.login);
 module.exports = userRouter;

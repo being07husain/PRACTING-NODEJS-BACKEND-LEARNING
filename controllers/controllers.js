@@ -5,6 +5,14 @@ exports.home = (req, res, next) => {
     res.render('home');
     console.log('HOME PAGE');
 };
+exports.login = (req, res, next) => {
+    res.render('login');
+    console.log('LOGIN PAGE');
+};
+exports.postlogin = (req, res, next) => {
+    res.redirect('home');
+    console.log('homepageafterlogin');
+}
 exports.product = (req, res, next) => {
     Product.fetchAll().then((products) => {
         res.render('product', { products });
