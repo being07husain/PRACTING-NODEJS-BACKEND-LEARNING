@@ -11,5 +11,6 @@ userRouter.get('/edit-product/:id', controllers.getEditProduct);
 userRouter.post('/edit-product/:id', controllers.postEditProduct);
 userRouter.post('/products/delete/:id', controllers.deleteProduct);
 userRouter.get('/login', controllers.login);
-userRouter.post('/', controllers.postlogin);
+userRouter.post('/home', controllers.postlogin);
+userRouter.get('/logout', controllers.logout);
 module.exports = userRouter;

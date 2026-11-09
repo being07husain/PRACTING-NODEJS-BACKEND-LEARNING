@@ -10,9 +10,15 @@ exports.login = (req, res, next) => {
     console.log('LOGIN PAGE');
 };
 exports.postlogin = (req, res, next) => {
-    req.isLoggedin = true;
+    res.cookie('isLoggedin', true);
     res.redirect('/home');
     console.log('homepageafterlogin');
+}
+exports.logout = (req, res, next) => {
+    res.cookie('isLoggedin', false);
+    res.redirect('/');
+    console.log('logout');
+
 }
 exports.product = (req, res, next) => {
     Product.fetchAll().then((products) => {
