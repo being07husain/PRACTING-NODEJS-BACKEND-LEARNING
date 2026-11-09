@@ -10,7 +10,8 @@ exports.login = (req, res, next) => {
     console.log('LOGIN PAGE');
 };
 exports.postlogin = (req, res, next) => {
-    res.redirect('/');
+    req.isLoggedin = true;
+    res.redirect('/home');
     console.log('homepageafterlogin');
 }
 exports.product = (req, res, next) => {

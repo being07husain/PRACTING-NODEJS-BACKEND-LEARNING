@@ -1,7 +1,8 @@
 const express = require('express');
 const userRouter = express.Router();
 const controllers = require('../controllers/controllers')
-userRouter.get('/', controllers.home);
+userRouter.get('/', controllers.login);
+userRouter.get('/home', controllers.home);
 userRouter.get('/products', controllers.product);
 userRouter.get('/sell', controllers.sellProductPage);
 userRouter.post('/sell', controllers.addProduct);
