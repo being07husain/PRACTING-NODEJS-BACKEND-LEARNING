@@ -1,15 +1,17 @@
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const port = 3000;
 
 const { mongoConnect } = require('./utils/database.js');
 
 app.use(express.urlencoded({ extended: true }));
+app.use(session({ secret: "SHUBBU HUSAIN LOVE SONAKSHI SEThi", resave: false, saveUninitialized: false })
+)
 app.use((req, res, next) => {
     console.log("cookie set middleware", req.get("Cookie"));
     req.isLoggedIn = req.get("Cookie") ? req.get("Cookie").split('=')[1] === 'true' : false;
     next();
-
 });
 app.use(express.json());
 

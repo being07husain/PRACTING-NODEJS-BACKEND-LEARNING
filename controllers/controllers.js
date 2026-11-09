@@ -10,7 +10,8 @@ exports.login = (req, res, next) => {
     console.log('LOGIN PAGE');
 };
 exports.postlogin = (req, res, next) => {
-    res.cookie('isLoggedin', true);
+    req.session.isLoggedIn = true;
+    // res.cookie('isLoggedin', true);
     res.redirect('/home');
     console.log('homepageafterlogin');
 }
